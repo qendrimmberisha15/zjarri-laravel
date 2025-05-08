@@ -1,0 +1,15 @@
+
+services:
+  - type: web
+    name: zjarri-laravel
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    repo: https://github.com/qendrimmberisha15/zjarri-laravel
+    branch: main
+    rootDir: .
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
