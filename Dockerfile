@@ -10,6 +10,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . /var/www/html
 
 WORKDIR /var/www/html
+
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache && \
